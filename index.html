@@ -38,7 +38,7 @@
             if (r == 0 && g == 0 && b > 0)
                 b--;
 
-            if (pageBG === null || isPhotoSensitive) break;
+            if (isPhotoSensitive) break;
             pageBG.style.background = 'rgb('+r+ ','+g+','+b+')';
         }
     }
