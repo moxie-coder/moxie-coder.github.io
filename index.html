@@ -39,7 +39,9 @@
                 b--;
 
             if (isPhotoSensitive) break;
-            pageBG.style.background = 'rgb('+r+ ','+g+','+b+')';
+
+            if (pageBG.style != undefined)
+                pageBG.style.background = 'rgb('+r+ ','+g+','+b+')';
         }
     }
     if (!isPhotoSensitive)
