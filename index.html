@@ -9,3 +9,39 @@
 <body>
     <ins>This page is currently under construction</ins>
 </body>
+
+<script type="text/javascript">
+    var isPhotoSensitive = false;
+
+    function init(){
+        while (true) {
+            // mostly from https://codepen.io/skuth/pen/jwRPOa
+            var pageBG = document.getElementsByClassName('bg')[0];
+
+            var r = 0, g = 0, b = 0;
+
+            if (r <= 255 && g == 0 && b == 0)
+		        r++;
+
+            if (r == 255 && b == 0 && g <= 255)
+                g++;
+
+            if (r == 255 && g == 255 && b <= 255)
+                b++;
+
+            if (b == 255 && g == 255 && r > 0)
+                r--;
+
+            if (r == 0 && b == 255 && g > 0)
+                g--;
+
+            if (r == 0 && g == 0 && b > 0)
+                b--;
+
+            if (pageBG === null || isPhotoSensitive) break;
+            pageBG.style.background = 'rgb('+r+ ','+g+','+b+')';
+        }
+    }
+    if (!isPhotoSensitive)
+        init();
+</script> 
