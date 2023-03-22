@@ -7,40 +7,8 @@
 </html>
 
 <body>
-    <ins>This page is currently under construction, in the meantime, enjoy this RGB background</ins>
+    <ins>This page is currently under construction, in the meantime</ins>
 </body>
 
 <script type="text/javascript">
-    var isPhotoSensitive = false;
-
-    function init(){
-        while (true) {
-            // mostly from https://codepen.io/skuth/pen/jwRPOa
-            var r = 0, g = 0, b = 0;
-
-            if (r <= 255 && g == 0 && b == 0)
-		        r++;
-
-            if (r == 255 && b == 0 && g <= 255)
-                g++;
-
-            if (r == 255 && g == 255 && b <= 255)
-                b++;
-
-            if (b == 255 && g == 255 && r > 0)
-                r--;
-
-            if (r == 0 && b == 255 && g > 0)
-                g--;
-
-            if (r == 0 && g == 0 && b > 0)
-                b--;
-
-            if (isPhotoSensitive) break;
-
-            document.body.style.backgroundColor = 'rgb('+r+ ','+g+','+b+')';
-        }
-    }
-    if (!isPhotoSensitive)
-        init();
 </script> 
