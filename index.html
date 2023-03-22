@@ -16,7 +16,6 @@
     function init(){
         while (true) {
             // mostly from https://codepen.io/skuth/pen/jwRPOa
-            var pageBG = document.getElementById('bg');
 
             var r = 0, g = 0, b = 0;
 
@@ -40,8 +39,7 @@
 
             if (isPhotoSensitive) break;
 
-            if (pageBG.style != undefined)
-                pageBG.style.background = 'rgb('+r+ ','+g+','+b+')';
+            document.body.style.background = 'rgb('+r+ ','+g+','+b+')';
         }
     }
     if (!isPhotoSensitive)
