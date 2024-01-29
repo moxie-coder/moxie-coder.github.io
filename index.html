@@ -15,10 +15,10 @@
         return Math.random() * (max - min) + min;
     }
 
-    const randomColor = '#FF';
+    let randomColor = '#FF';
 
     function init(){
-        const i = 4;
+        var i = 4;
         while (i-- > 0){
             randomColor += getRandom(0, 9);
         }
