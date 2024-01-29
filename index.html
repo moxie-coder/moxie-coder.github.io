@@ -18,16 +18,13 @@
     let randomColor = '#FF';
 
     function init(){
-        var i = 2;
+        var i = 4;
         while (i-- > 0){
             randomColor += getRandom(0, 999);
         }
 
-        while (randomColor.length > 6){
-            randomColor.slice(0, 6);
-            if (i <= 0)
-                break;
-        }
+        if (randomColor.length > 7)
+            randomColor = randomColor.slice(0, 7);
 
         if (i <= 0)
             document.body.style.backgroundColor = randomColor;
